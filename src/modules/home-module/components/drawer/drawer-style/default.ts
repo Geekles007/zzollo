@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { TextInput, Button } from "carbon-components-react";
-import github from './../../../../../assets/icons/001-github.svg';
+import github from '../../../../../assets/icons/001-github.svg';
 
 const CustomDrawer = styled.div`
     width: 350px;
