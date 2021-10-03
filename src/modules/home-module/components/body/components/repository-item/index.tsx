@@ -1,31 +1,31 @@
 import React, { memo } from "react";
 import { IRepository } from "../../../../../../model/IRepository";
-import { CustomAspectRatio } from "../repository-list/repository-list-style/default";
-import { buildKey } from "../../../../../../utils/unique-key";
-import { Column, Link } from "carbon-components-react";
-import { RepoContainerImg, RepoLink } from "./repository-item-style/default";
+import {Column, Grid, Link, Row} from "carbon-components-react";
 
-import { LogoGithub24 } from "@carbon/icons-react";
+import {ArrowDownRight32, Link32, LogoGithub24, LogoGithub32} from "@carbon/icons-react";
+import DDSCard from "@carbon/ibmdotcom-web-components/es/components-react/card/card";
+import DDSCardHeading from "@carbon/ibmdotcom-web-components/es/components-react/card/card-heading";
+import DDSCardCTAFooter from "@carbon/ibmdotcom-web-components/es/components-react/cta/card-cta-footer";
 
 interface RepositoryItemProps {
-    repo: IRepository;
+    repo: any;
     href: string;
 }
 
 const RepositoryItem: React.FC<RepositoryItemProps> = ({repo, href}: RepositoryItemProps) => {
 
     return (
-        <>
-            <Column key={buildKey()} xlg={2} lg={4} md={4} sm={6}>
-                <RepoLink href={href} target="_blank">
-                    <CustomAspectRatio ratio="2x1">
-                        <RepoContainerImg>
-                            <LogoGithub24 color="#000" />
-                        </RepoContainerImg>
-                    </CustomAspectRatio>
-                </RepoLink>
-            </Column>
-        </>
+        <div className={"card-article"}>
+            <DDSCard className={"repo"} href={href}>
+                <DDSCardHeading><strong>{repo.name}</strong></DDSCardHeading>
+                <p>{repo.description}</p>
+                <DDSCardCTAFooter slot={"footer"}>
+                    {
+                        repo && repo["html_url"] ? <LogoGithub32/> : <Link32 />
+                    }
+                </DDSCardCTAFooter>
+            </DDSCard>
+        </div>
     );
 
 }

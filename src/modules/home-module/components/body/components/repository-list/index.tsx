@@ -4,16 +4,22 @@ import { buildKey } from "../../../../../../utils/unique-key";
 import { CustomAspectRatio, RepoGrid } from "./repository-list-style/default";
 import RepositoryItem from "../repository-item";
 
-const RepositoryList: React.FC<{}> = () => {
+interface RepositoryListProps {
+    list: any;
+}
+
+const RepositoryList = ({list}: RepositoryListProps) => {
 
     return (
         <>
             <RepoGrid>
-                <Row>
+                <Row condensed>
                     {
-                        [1,2,3,4,5].map(item => {
+                        list.map((item: any) => {
                             return (
-                                <RepositoryItem repo={{}} href={"http://yes.com"} />
+                                <Column lg={3} key={buildKey()}>
+                                    <RepositoryItem repo={item} href={"http://yes.com"} />
+                                </Column>
                             )
                         })
                     }

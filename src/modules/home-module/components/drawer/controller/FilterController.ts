@@ -83,14 +83,6 @@ class FilterController {
 
         return filters;
     }
-
-    /**
-     * @param event: React.ChangeEvent
-     * @param type: string
-     */
-    handleChangeOption = (event: React.ChangeEvent, type: string) => {
-
-    }
 }
 
 export default new FilterController;

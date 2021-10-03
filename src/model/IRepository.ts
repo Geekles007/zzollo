@@ -1,4 +1,5 @@
 export type IRepository = {
+    uuid?: string;
     containerLogo?: string;
     name?: string;
     avatar?: string;
@@ -7,4 +8,7 @@ export type IRepository = {
     issues?: number;
     forks?: number;
     description?: string;
+    owner?: {
+        display_name: string
+    }
 }
