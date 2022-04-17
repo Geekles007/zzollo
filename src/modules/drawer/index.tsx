@@ -8,7 +8,7 @@ interface DrawerProps {
 }
 
 const responsiveDrawerStyle = "mobile-drawer";
-const animationDrawerStyle = "ease-in-out duration-500 transition-all";
+export const animationDrawerStyle = "ease-in-out duration-500 transition-all";
 
 const Drawer = ({}: DrawerProps) => {
 

@@ -3,6 +3,7 @@ import {avatarImgStyle} from "../../../drawer/children/avatar";
 import {FaBitbucket, FaGithub, FaGitlab} from "react-icons/fa";
 import {IRepo} from "../../../../redux/searchReducer";
 import noAvatar from "./../../../../assets/images/noavatar.png"
+import {animationDrawerStyle} from "../../../drawer";
 
 interface RepoItemProps {
     repo: IRepo
@@ -24,7 +25,7 @@ const RepoItem = ({repo}: RepoItemProps) => {
         }
     }
 
-    return <a href={repo?.link ?? "#"} target={"_blank"} className={"bg-white relative overflow-hidden rounded-md cursor-pointer h-48 shadow-lg px-4 py-2 flex flex-col justify-between"}>
+    return <a href={repo?.link ?? "#"} target={"_blank"} className={`bg-white hover:bg-yellow-100 ${animationDrawerStyle} relative overflow-hidden rounded-md cursor-pointer h-48 shadow-lg px-4 py-2 flex flex-col justify-between`}>
         <div className="flex flex-col z-10">
             <strong>{repo?.name}</strong>
             <p className={"text-xs my-2 text-ellipsis overflow-hidden max-h-12"}>{repo?.description ?? "ras"}</p>
