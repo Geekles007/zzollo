@@ -17,10 +17,10 @@ const Body = ({state}: BodyProps) => {
     const {data: gitlab_list, status: statusLab} = useFetch(`https://gitlab.com/api/v4/projects?search=${state?.searchText}&page=1&per_page=100`);
     const {data: github_list, status: statusHub} = useFetch(`https://api.github.com/search/repositories?sort=stars&q=${state?.searchText}&page=1&per_page=100`);
     const [list, setList] = useState<any>([]);
-    // const {data: bitbucket_list} = useFetch(`https://api.bitbucket.org/2.0/repositories/${state?.searchText}`);
+    // const {data: bitbucket_list, status: statusBit} = useFetch(`https://api.bitbucket.org/2.0/repositories/${state?.searchText ?? ""}`);
 
     useEffect(() => {
-        setList([...(github_list["items"] ?? []), ...(gitlab_list ?? [])])
+        setList([...(github_list["items"] ?? []), ...(gitlab_list ?? [])]);
     }, [state])
 
     if(statusHub === "fetching" || statusLab === "fetching") {

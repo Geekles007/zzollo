@@ -17,11 +17,11 @@ const HomePage: React.FC<{}> = () => {
      * @param type: string
      */
     const handleChangeOption = debounce(useCallback((event: any, type: string) => {
-        setState({
+        setState(() => ({
             ...state,
             [type]: event.target.value
-        });
-    }, [state]), 300)
+        }));
+    }, [setState]), 300)
 
     return (
         <ThemeProvider theme={ThemeStore.CurrentTheme}>

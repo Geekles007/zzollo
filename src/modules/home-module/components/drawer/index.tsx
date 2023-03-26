@@ -55,7 +55,7 @@ const Drawer = ({onChangeHandler, state}: DrawerProps) => {
                         </div>
                     </Form>
                 </div>
-                <a href="https://github.com/sanix-darker/zolo" target="_blank" className="source-link"></a>
+                <a href="https://github.com/Geekles007/zzollo" target="_blank" className="source-link"></a>
             </CustomDrawer>
         </>
     );

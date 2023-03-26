@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const BodyWrapper = styled.div`
-    width: calc(100% - 350px);
+    width: calc(100% - 300px);
     background-color: #fff;
     height: 100vh;
     overflow-y: scroll;

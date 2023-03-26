@@ -17,8 +17,8 @@ const RepositoryList = ({list}: RepositoryListProps) => {
                     {
                         list.map((item: any) => {
                             return (
-                                <Column lg={3} key={buildKey()}>
-                                    <RepositoryItem repo={item} href={"http://yes.com"} />
+                                <Column lg={3} md={4} sm={12} key={buildKey()}>
+                                    <RepositoryItem repo={item} href={item.html_url} />
                                 </Column>
                             )
                         })

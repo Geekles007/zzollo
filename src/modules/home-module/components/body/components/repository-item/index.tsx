@@ -15,7 +15,7 @@ interface RepositoryItemProps {
 const RepositoryItem: React.FC<RepositoryItemProps> = ({repo, href}: RepositoryItemProps) => {
 
     return (
-        <div className={"card-article"}>
+        <a className={"card-article"} href={href} target={"_blank"}>
             <DDSCard className={"repo"} href={href}>
                 <DDSCardHeading><strong>{repo.name}</strong></DDSCardHeading>
                 <p>{repo.description}</p>
@@ -25,7 +25,7 @@ const RepositoryItem: React.FC<RepositoryItemProps> = ({repo, href}: RepositoryI
                     }
                 </DDSCardCTAFooter>
             </DDSCard>
-        </div>
+        </a>
     );
 
 }

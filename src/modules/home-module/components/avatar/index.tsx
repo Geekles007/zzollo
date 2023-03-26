@@ -5,11 +5,11 @@ import {CustomAvatar} from './avatar-style/default';
 const Avatar = () => {
     return (
         <CustomAvatar>
-            <a href="github.com/sanix-darker" title="By Sanix-darker">
-                <img alt="" src="https://avatars1.githubusercontent.com/u/22576758?s=60&v=4"/>
+            <a href="https://github.com/Geekles007" title="By Sanix-darker">
+                <img alt="" src="https://avatars.githubusercontent.com/u/24395977?v=4"/>
             </a>
             <div className="naming">
-                <a href="/" className="appName">Z0L0</a>
+                <a href="/" className="appName">ZZ0L00</a>
                 <small> Search open-source projects on github / gitlab / bitbucket.</small>
             </div>
         </CustomAvatar>

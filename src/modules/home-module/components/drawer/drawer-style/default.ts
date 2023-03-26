@@ -3,7 +3,7 @@ import { TextInput, Button } from "carbon-components-react";
 import github from '../../../../../assets/icons/001-github.svg';
 
 const CustomDrawer = styled.div`
-    width: 350px;
+    width: 300px;
     background-color: ${({theme}) => theme.bgSecondColor};
     height: 100vh;
     padding: 20px;
