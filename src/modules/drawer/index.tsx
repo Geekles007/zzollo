@@ -21,7 +21,7 @@ const Drawer = ({}: DrawerProps) => {
                 <h5 className={"text-sm"}>What do you wan to search?</h5>
                 <SearchEngine />
             </div>
-            <a href="/" className="w-full items-center flex text-white underline">
+            <a href="https://github.com/Geekles007/zzollo" target={"_blank"} className="w-full items-center flex text-white underline">
                 <FaGithub size={25} className={"mr-2"} />
                 <small>Project link</small>
             </a>
